@@ -1,6 +1,11 @@
-fetch("data.json")
-.then(response => response.json())
-.then(data => {
+var request = new XMLHttpRequest();
+  const proxyurl = "https://cors-anywhere.herokuapp.com/";
+  request.open('GET', proxyurl+'https://fortniteapi.io/v1/loot/list?lang=en');
+  request.setRequestHeader('Authorization', '5b80a973-bbf3638c-2d35fc67-768cb542');
+
+  request.onreadystatechange = function () {
+    if (this.readyState === 4) {
+        var data = JSON.parse(this.responseText);
 
     const weapons = Object.keys(data.weapons);
     var weaponList = document.querySelector('.weapon_list')
