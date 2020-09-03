@@ -39,7 +39,9 @@ h1 {
     
 }
 
-
+/* .home_page {
+    display: none;
+} */
 
 .weapon_list{
     width: 80%;
@@ -48,9 +50,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    display: none;
-    
-
+    display: none; 
 }
 
 .weapons {
@@ -70,12 +70,19 @@ h1 {
 
 
 .weapon_detail {
-    width: 50%;
-    height: 50%;
-    margin: 0 auto;
-    margin-top: 7%;
+    width: 40%;
+    background-color: cadetblue;
+    border: cornflowerblue 3px solid;
+    border-radius: 1%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: none;
-    
+}
+
+.weapon_detail_nameandarrow {
+    display: flex;
 }
 
 .weapon_detail_arrow {
@@ -83,25 +90,38 @@ h1 {
     cursor: pointer;
 }
 
+.weapon_detail_arrow:hover {
+    background-color: darkgoldenrod;
+}
+
 .weapon_detail_imgandcontent {
     display: flex;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .weapon_detail_name {
     text-align: center;
     font-size: 40px;
-    margin: 20px;
+    margin-left: 120px;
 }
 
 .weapon_detail img {
     width: 45%;
+    height: 45%;
     margin-right: 15px;
+}
+
+.weapon_detail_content{
+    width: 45%;
+    height: 45%;
 }
 
 .weapon_detail_content p{
     font-size: 21px;
     margin: 10px;
 }
+
 
 
 

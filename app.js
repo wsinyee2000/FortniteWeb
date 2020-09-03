@@ -6,7 +6,7 @@ var request = new XMLHttpRequest();
   request.onreadystatechange = function () {
     if (this.readyState === 4) {
         var data = JSON.parse(this.responseText);
-
+        //start
         const weapons = Object.keys(data.weapons);
         var weaponList = document.querySelector('.weapon_list')
 
@@ -83,7 +83,6 @@ var request = new XMLHttpRequest();
 
                     }
                 }
-                weaponList.style.display = "none";
                 weapondetail.style.display = "block";
                 
             });
@@ -119,8 +118,8 @@ var weaponsDetailBackBtn = document.querySelector(".weapon_detail_arrow");
 var weapondetail = document.querySelector(".weapon_detail");
 
 weaponsDetailBackBtn.addEventListener('click', () => {
+
     weapondetail.style.display = "none";
-    weaponList.style.display = "flex";
 });
 
 
